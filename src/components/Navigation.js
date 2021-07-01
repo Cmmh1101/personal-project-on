@@ -21,8 +21,8 @@ const Navigation = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <Navbar color="primary" dark expand="md">
+    <React.Fragment>
+      <Navbar className="landing-navbar" color="primary" dark expand="md">
         <NavbarBrand to="/">OurNet</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -60,7 +60,7 @@ const Navigation = (props) => {
           </Button>{" "}
         </Collapse>
       </Navbar>
-    </div>
+    </React.Fragment>
   );
 };
 
