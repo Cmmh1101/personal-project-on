@@ -22,29 +22,35 @@ const Navigation = (props) => {
 
   return (
     <div>
-      <Navbar color="secondary" dark expand="md">
-        <NavbarBrand href="/">OurNet</NavbarBrand>
+      <Navbar color="primary" dark expand="md">
+        <NavbarBrand to="/">OurNet</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mx-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Home</NavLink>
+              <NavLink to="/">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#">Features</NavLink>
+              <NavLink to="/">Features</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#">About</NavLink>
+              <NavLink to="/">About</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Support
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>Frequent Questions</DropdownItem>
-                <DropdownItem>Contact</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
+                <DropdownItem>
+                  <NavLink className="text-primary" to="/">
+                    Frequent Questions
+                  </NavLink>
+                </DropdownItem>
+                <DropdownItem>
+                  <NavLink className="text-primary" to="/">
+                    Contact
+                  </NavLink>
+                </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
