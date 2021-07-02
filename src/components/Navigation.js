@@ -1,19 +1,6 @@
 import React, { useState } from "react";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  Button,
-} from "reactstrap";
-import LoginModal from "./LoginModal";
+import { Link } from "react-router-dom";
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav } from "reactstrap";
 
 const Navigation = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,42 +10,20 @@ const Navigation = (props) => {
   return (
     <React.Fragment>
       <Navbar className="landing-navbar" color="primary" dark expand="md">
-        <NavbarBrand to="/">OurNet</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mx-auto" navbar>
-            <NavItem>
-              <NavLink to="/">Home</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="/">Features</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="/">About</NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Support
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  <NavLink className="text-primary" to="/">
-                    Frequent Questions
-                  </NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                  <NavLink className="text-primary" to="/">
-                    Contact
-                  </NavLink>
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-          <LoginModal />
-          <Button color="warning" className="text-dark">
-            Sign Up
-          </Button>{" "}
-        </Collapse>
+        <div className="container">
+          <NavbarBrand href="/">OurNet</NavbarBrand>
+          <NavbarToggler onClick={toggle} />
+          <Collapse isOpen={isOpen} navbar>
+            <Nav className="ml-auto">
+              <Link to="/" className="btn btn-info text-dark">
+                Log in
+              </Link>{" "}
+              <Link to="/signuppage" className="btn btn-warning text-dark">
+                Sign Up
+              </Link>{" "}
+            </Nav>
+          </Collapse>
+        </div>
       </Navbar>
     </React.Fragment>
   );

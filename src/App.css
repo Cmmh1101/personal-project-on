@@ -35,3 +35,13 @@ q {
 .orange-span {
   color: #f1c179;
 }
+
+.intro-image {
+  width: 100%;
+}
+
+.intro-image img {
+  width: 100%;
+  border-radius: 50%;
+  border: 5px solid #42c2f9;
+}

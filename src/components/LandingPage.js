@@ -2,6 +2,7 @@ import React from "react";
 import Navigation from "./Navigation";
 import Hero from "./HeroComponent";
 import Intro from "./IntroComponent";
+import Footer from "./footerComponent";
 
 function LandingPage() {
   return (
@@ -9,6 +10,7 @@ function LandingPage() {
       <Navigation />
       <Hero />
       <Intro />
+      <Footer />
     </React.Fragment>
   );
 }
