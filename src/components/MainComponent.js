@@ -3,7 +3,7 @@ import LandingPage from "./LandingPage";
 import SignUpPage from "./Signuppage";
 import { Switch, Route, Redirect } from "react-router-dom";
 import LoginPage from "./LoginPage";
-import HomePage from "./HomePage";
+import HomePage from "../pages/HomePage";
 
 function Main() {
   return (
