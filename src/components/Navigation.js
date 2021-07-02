@@ -15,7 +15,7 @@ const Navigation = (props) => {
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto">
-              <Link to="/" className="btn btn-info text-dark">
+              <Link to="/loginpage" className="btn btn-info text-dark">
                 Log in
               </Link>{" "}
               <Link to="/signuppage" className="btn btn-warning text-dark">

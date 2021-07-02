@@ -11,7 +11,7 @@ import {
 } from "reactstrap";
 import SimpleNav from "./SimpleNav";
 
-class SignUpPage extends Component {
+class LoginPage extends Component {
   constructor(props) {
     super(props);
 
@@ -103,48 +103,11 @@ class SignUpPage extends Component {
         <div className="container">
           <div className="row row-content">
             <div className="col-12 my-5">
-              <h2>Sign up</h2>
+              <h2>Log in</h2>
               <hr />
             </div>
             <div className="col-md-10 col-lg-8 mx-auto">
               <Form onSubmit={this.handleSubmit}>
-                <FormGroup row>
-                  <Label htmlFor="firstName" md={2} lg={3}>
-                    First Name
-                  </Label>
-                  <Col md={10} lg={8}>
-                    <Input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      placeholder="First Name"
-                      value={this.state.firstName}
-                      invalid={errors.firstName}
-                      onBlur={this.handleBlur("firstName")}
-                      onChange={this.handleInputChange}
-                    />
-                    <FormFeedback>{errors.firstName}</FormFeedback>
-                  </Col>
-                </FormGroup>
-                <FormGroup row>
-                  <Label htmlFor="lastName" md={2} lg={3}>
-                    Last Name
-                  </Label>
-                  <Col md={10} lg={8}>
-                    <Input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      placeholder="Last Name"
-                      value={this.state.lastName}
-                      invalid={errors.lastName}
-                      onBlur={this.handleBlur("lastName")}
-                      onChange={this.handleInputChange}
-                    />
-                    <FormFeedback>{errors.lastName}</FormFeedback>
-                  </Col>
-                </FormGroup>
-
                 <FormGroup row>
                   <Label htmlFor="email" md={2} lg={3}>
                     Email
@@ -172,7 +135,7 @@ class SignUpPage extends Component {
                       type="password"
                       id="password"
                       name="password"
-                      placeholder="Create Password"
+                      placeholder="Password"
                       value={this.state.password}
                       invalid={errors.password}
                       onBlur={this.handleBlur("password")}
@@ -181,20 +144,11 @@ class SignUpPage extends Component {
                     <FormFeedback>{errors.password}</FormFeedback>
                   </Col>
                 </FormGroup>
-                <div className="row">
-                  <Col md={{ size: 10, offset: 2 }} lg={{ size: 8, offset: 3 }}>
-                    <p>
-                      By signing up, you agree to our{" "}
-                      <Link to="/">Terms of Service</Link> and{" "}
-                      <Link to="/">Private Policy</Link> and to receive notice
-                      on event and services.
-                    </p>
-                  </Col>
-                </div>
+
                 <FormGroup row>
                   <Col md={{ size: 10, offset: 2 }} lg={{ size: 8, offset: 3 }}>
                     <Button type="submit" color="primary" className="btn-block">
-                      Sign up
+                      Log in
                     </Button>
                   </Col>
                 </FormGroup>
@@ -202,8 +156,16 @@ class SignUpPage extends Component {
               <div className="row">
                 <Col md={{ size: 10, offset: 2 }} lg={{ size: 8, offset: 3 }}>
                   <p>
-                    Already a Member?
-                    <Link to="/loginpage"> Log in</Link>
+                    Forgot you password?
+                    <Link to="/">
+                      <b> Reset Password</b>
+                    </Link>
+                  </p>
+                  <p>
+                    First time in OurNet?
+                    <Link to="/signuppage">
+                      <b> Sign up here</b>{" "}
+                    </Link>
                   </p>
                 </Col>
               </div>
@@ -214,4 +176,4 @@ class SignUpPage extends Component {
     );
   }
 }
-export default SignUpPage;
+export default LoginPage;

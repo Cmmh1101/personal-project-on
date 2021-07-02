@@ -45,3 +45,17 @@ q {
   border-radius: 50%;
   border: 5px solid #42c2f9;
 }
+/* Social icons */
+
+footer .social-icons a i {
+  color: #fff;
+  font-size: 2rem;
+  margin: 20px;
+  color: #42c2f9;
+  transition: all 0.3s ease-in-out;
+}
+
+footer .social-icons a i:hover {
+  color: #f1c179;
+  transform: scale(1.1);
+}

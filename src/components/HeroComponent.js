@@ -1,5 +1,6 @@
 import React from "react";
-import { Jumbotron, Button } from "reactstrap";
+import { Link } from "react-router-dom";
+import { Jumbotron } from "reactstrap";
 
 function Hero(props) {
   return (
@@ -19,7 +20,9 @@ function Hero(props) {
                   events, news, recommentations, plans, and more!
                 </p>
                 <p className="lead">
-                  <Button color="primary">Sign up - OurNet is Free!</Button>
+                  <Link to="/signuppage" className="btn btn-primary">
+                    Sign up - OurNet is Free!
+                  </Link>
                 </p>
               </div>
             </div>
