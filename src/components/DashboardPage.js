@@ -1,8 +1,8 @@
 import React from "react";
-import Sidebar from "../components/SidebarComponent";
-import Welcome from "../components/WelcomeComponent";
+import Sidebar from "./SidebarComponent";
+import NewPostModal from "./NewPostModal";
 
-function HomePage() {
+function DashboardPage() {
   return (
     <React.Fragment>
       <div className="d-flex ">
@@ -10,7 +10,10 @@ function HomePage() {
         <div className="container">
           <div className="row">
             <div className="col">
-              <Welcome />
+              <h1 className="my-3">News</h1>
+              <div className="col-8">
+                <NewPostModal />
+              </div>
             </div>
           </div>
         </div>
@@ -19,4 +22,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default DashboardPage;

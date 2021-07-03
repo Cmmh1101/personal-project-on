@@ -3,7 +3,8 @@ import LandingPage from "./LandingPage";
 import SignUpPage from "./Signuppage";
 import { Switch, Route, Redirect } from "react-router-dom";
 import LoginPage from "./LoginPage";
-import HomePage from "../pages/HomePage";
+import HomePage from "./HomePage";
+import DashboardPage from "./DashboardPage";
 
 function Main() {
   return (
@@ -14,7 +15,7 @@ function Main() {
         <Route exact path="/signuppage" component={SignUpPage} />
         <Route exact path="/loginpage" component={LoginPage} />
         <Route exact path="/homepage" component={HomePage} />
-        <Route exact path="/about" />
+        <Route exact path="/dashboardpage" component={DashboardPage} />
         <Route exact path="/contactus" />
         <Redirect to="/home" />
       </Switch>
