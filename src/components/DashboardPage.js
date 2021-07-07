@@ -14,6 +14,7 @@ function DashboardPage() {
               <div className="col-8">
                 <NewPostModal />
               </div>
+              <div className="col-8"></div>
             </div>
           </div>
         </div>
