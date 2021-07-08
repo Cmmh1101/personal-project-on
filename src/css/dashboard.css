@@ -1,0 +1,15 @@
+.user-image {
+  width: 60px;
+}
+.user-image img {
+  width: 100%;
+}
+
+.memo {
+  font-size: 0.8rem;
+}
+
+textarea {
+  height: 100px;
+  max-height: auto;
+}
