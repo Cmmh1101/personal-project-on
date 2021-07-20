@@ -1,7 +1,7 @@
 .sidebar {
   width: 300px;
 
-  height: 100vh;
+  height: auto;
   background: linear-gradient(
     144.45deg,
     #42c2f9 27.83%,

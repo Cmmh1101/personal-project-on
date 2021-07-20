@@ -4,10 +4,12 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import LoginPage from "./LoginPage";
 import HomePage from "./HomePage";
 import DashboardPage from "./DashboardPage";
+import SimpleNav from "./SimpleNav";
 
 function Main() {
   return (
     <React.Fragment>
+      <SimpleNav />
       <Switch>
         <Route path="/homepage" component={HomePage} />
 
