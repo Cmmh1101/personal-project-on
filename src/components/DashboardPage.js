@@ -2,6 +2,7 @@ import React from "react";
 import { Form, FormGroup, Input, Button } from "reactstrap";
 import Sidebar from "./SidebarComponent";
 import NewPostModal from "./NewPostModal";
+import NewPostForm from "./NewPostFormComponent";
 import "../css/dashboard.css";
 
 function DashboardPage() {
@@ -61,6 +62,12 @@ function DashboardPage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-md-10 col-xl-8">
+              <NewPostForm />
             </div>
           </div>
         </div>

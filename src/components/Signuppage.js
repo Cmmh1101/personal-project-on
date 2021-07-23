@@ -9,7 +9,6 @@ import {
   Col,
   FormFeedback,
 } from "reactstrap";
-import SimpleNav from "./SimpleNav";
 
 class SignUpPage extends Component {
   constructor(props) {
@@ -99,7 +98,6 @@ class SignUpPage extends Component {
 
     return (
       <React.Fragment>
-        <SimpleNav />
         <div className="container">
           <div className="row row-content">
             <div className="col-12 my-5">

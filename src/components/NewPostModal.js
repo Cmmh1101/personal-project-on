@@ -19,6 +19,8 @@ const NewPostModal = (props) => {
 
   const toggle = () => setModal(!modal);
 
+  
+
   return (
     <div>
       <Link color="danger" onClick={toggle}>
@@ -38,7 +40,7 @@ const NewPostModal = (props) => {
           <Form>
             <FormGroup>
               <Label for="exampleText">What's on your mind?</Label>
-              <Input type="textarea" name="text" id="exampleText" />
+              <Input onC type="textarea" name="text" id="exampleText" />
             </FormGroup>
           </Form>
         </ModalBody>
