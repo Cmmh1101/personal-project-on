@@ -2,28 +2,26 @@ import React, { Component } from "react";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 
 class NewPostForm extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {};
-  }
-
-  handleChange = (e) => {
-    // console.log({
-    //   name: e.target.name,
-    //   value: e.target.value,
-    // });
-
-    this.setState({
-      newPost: e.target.value,
-    });
-  };
+  // constructor(props) {
+  //   super(props);
+  // }
+  // state = {};
+  // handleChange = (e) => {
+  //   console.log({
+  //     name: e.target.name,
+  //     value: e.target.value,
+  //   });
+  //   this.setState({
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
   handleClick = (e) => {
     console.log("Button was clicked");
   };
   handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form was submitted");
+    console.log(this.state);
   };
 
   render() {
@@ -34,11 +32,11 @@ class NewPostForm extends Component {
           <FormGroup>
             <Label>Whats in your mind?</Label>
             <Input
-              onChange={this.handleChange}
+              onChange={this.props.onChange}
               className="form-control"
-              type="text"
+              type="textarea"
               name="newPost"
-              value={this.state.newPost}
+              value={this.props.formValues.newPost}
             />
           </FormGroup>
           <Button
